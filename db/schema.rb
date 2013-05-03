@@ -16,12 +16,10 @@ ActiveRecord::Schema.define(version: 20130503035327) do
   create_table "courses", force: true do |t|
     t.string   "name"
     t.integer  "teacher_id"
-    t.integer  "student_id"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
 
-  add_index "courses", ["student_id"], name: "index_courses_on_student_id"
   add_index "courses", ["teacher_id"], name: "index_courses_on_teacher_id"
 
   create_table "enrollments", force: true do |t|
