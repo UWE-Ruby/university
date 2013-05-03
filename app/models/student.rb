@@ -1,6 +1,6 @@
 class Student < ActiveRecord::Base
-  belongs_to :course
-  has_many :teachers, through: :courses
+  has_many :enrollments
+  has_many :courses, through: :enrollments
 
   validates :name, presence: true
 end
